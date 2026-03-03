@@ -1,0 +1,732 @@
+[ec2-user@ip-172-31-34-140 ~]$ mkdir myprofile-app
+[ec2-user@ip-172-31-34-140 ~]$
+[ec2-user@ip-172-31-34-140 ~]$
+[ec2-user@ip-172-31-34-140 ~]$ cd myprofile-app/
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ ls
+[ec2-user@ip-172-31-34-140 myprofile-app]$ vi index.html
+[ec2-user@ip-172-31-34-140 myprofile-app]$ [ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ ls
+index.html
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ cat index.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            margin: auto;
+            width: 400px;
+            box-shadow: 0 0 10px gray;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Your Name</h1>
+        <p><b>Role:</b> DevOps Learner</p>
+        <p><b>Location:</b> India</p>
+        <p><b>Project:</b> EC2 + Docker Practice</p>
+    </div>
+</body>
+</html>
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ vi Dockerfile
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ vi docker-compose.yml
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo dnf install docker-compose-plugin -y
+Last metadata expiration check: 3:20:31 ago on Tue Mar  3 06:40:53 2026.
+No match for argument: docker-compose-plugin
+Error: Unable to find a match: docker-compose-plugin
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ docker compose version
+docker: 'compose' is not a docker command.
+See 'docker --help'
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ docker compose version
+docker: 'compose' is not a docker command.
+See 'docker --help'
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo dnf install docker-compose-plugin -y
+Last metadata expiration check: 3:21:30 ago on Tue Mar  3 06:40:53 2026.
+No match for argument: docker-compose-plugin
+Error: Unable to find a match: docker-compose-plugin
+[ec2-user@ip-172-31-34-140 myprofile-app]$ client_loop: send disconnect: Connection reset
+PS C:\Users\Abhinath O\Downloads> ssh -i "win.pem" ec2-user@ec2-13-127-209-193.ap-south-1.compute.amazonaws.com
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Tue Mar  3 09:56:55 2026 from 27.4.244.176
+[ec2-user@ip-172-31-34-140 ~]$ cd myprofile-app/
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo mkdir -p /usr/local/lib/docker/cli-plugins
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo curl -SL https://github.com/docker/compose/releases/latest/download/docker-compose-linux-x86_64 \
+-o /usr/local/lib/docker/cli-plugins/docker-compose
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0   0     0   0     0     0     0  --:--:-- --:--:-- --:--:--     0
+  0     0   0     0   0     0     0     0  --:--:-- --:--:-- --:--:--     0
+100 30804k 100 30804k   0     0 49540k     0  --:--:-- --:--:-- --:--:-- 49540k
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ ll
+total 12
+-rw-r--r--. 1 ec2-user ec2-user  67 Mar  3 10:00 Dockerfile
+-rw-r--r--. 1 ec2-user ec2-user 121 Mar  3 10:01 docker-compose.yml
+-rw-r--r--. 1 ec2-user ec2-user 678 Mar  3 09:59 index.html
+[ec2-user@ip-172-31-34-140 myprofile-app]$ docker compose version
+Docker Compose version v5.1.0
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ docker compose up -d
+WARN[0000] /home/ec2-user/myprofile-app/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion
+[+] up 0/1
+ ⠋ Image myprofile-app-myprofile Building                                                                                                               0.0s
+compose build requires buildx 0.17.0 or later
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo mkdir -p /usr/libexec/docker/cli-plugins
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo curl -SL https://github.com/docker/buildx/releases/latest/download/buildx-linux-amd64 \
+-o /usr/libexec/docker/cli-plugins/docker-buildx
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0   0     0   0     0     0     0  --:--:-- --:--:-- --:--:--     0
+100     9 100     9   0     0    14     0  --:--:-- --:--:-- --:--:--    14
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo chmod +x /usr/libexec/docker/cli-plugins/docker-buildx
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo systemctl restart docker
+[ec2-user@ip-172-31-34-140 myprofile-app]$ docker buildx version
+docker: 'buildx' is not a docker command.
+See 'docker --help'
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ docker compose up -d
+WARN[0000] /home/ec2-user/myprofile-app/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion
+[+] up 0/1
+ ⠋ Image myprofile-app-myprofile Building                                                                                                               0.0s
+failed to fetch metadata: fork/exec /usr/libexec/docker/cli-plugins/docker-buildx: exec format error
+[ec2-user@ip-172-31-34-140 myprofile-app]$ ls -lrt
+total 12
+-rw-r--r--. 1 ec2-user ec2-user 678 Mar  3 09:59 index.html
+-rw-r--r--. 1 ec2-user ec2-user  67 Mar  3 10:00 Dockerfile
+-rw-r--r--. 1 ec2-user ec2-user 121 Mar  3 10:01 docker-compose.yml
+[ec2-user@ip-172-31-34-140 myprofile-app]$ chmod 777 *
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ ls -lrt
+total 12
+-rwxrwxrwx. 1 ec2-user ec2-user 678 Mar  3 09:59 index.html
+-rwxrwxrwx. 1 ec2-user ec2-user  67 Mar  3 10:00 Dockerfile
+-rwxrwxrwx. 1 ec2-user ec2-user 121 Mar  3 10:01 docker-compose.yml
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ docker compose up -d
+WARN[0000] /home/ec2-user/myprofile-app/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion
+[+] up 0/1
+ ⠋ Image myprofile-app-myprofile Building                                                                                                               0.0s
+failed to fetch metadata: fork/exec /usr/libexec/docker/cli-plugins/docker-buildx: exec format error
+[ec2-user@ip-172-31-34-140 myprofile-app]$ uname -m
+x86_64
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo rm /usr/libexec/docker/cli-plugins/docker-buildx
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo curl -SL https://github.com/docker/buildx/releases/latest/download/buildx-linux-arm64 \
+-o /usr/libexec/docker/cli-plugins/docker-buildx
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0   0     0   0     0     0     0  --:--:-- --:--:-- --:--:--     0
+  0     0   0     0   0     0     0     0  --:--:-- --:--:-- --:--:--     0
+100     9 100     9   0     0    14     0  --:--:-- --:--:-- --:--:--     0
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo chmod +x /usr/libexec/docker/cli-plugins/docker-buildx
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo systemctl restart docker
+
+[ec2-user@ip-172-31-34-140 myprofile-app]$ docker buildx version
+docker: 'buildx' is not a docker command.
+See 'docker --help'
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo rm -f /usr/libexec/docker/cli-plugins/docker-buildx
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo curl -L https://github.com/docker/buildx/releases/latest/download/buildx-linux-amd64 \
+-o docker-buildx
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0   0     0   0     0     0     0  --:--:-- --:--:-- --:--:--     0
+100     9 100     9   0     0    15     0  --:--:-- --:--:-- --:--:--    15
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ ls -lh docker-buildx
+-rw-r--r--. 1 root root 9 Mar  3 10:16 docker-buildx
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo mkdir -p /usr/libexec/docker/cli-plugins
+sudo mv docker-buildx /usr/libexec/docker/cli-plugins/
+sudo chmod +x /usr/libexec/docker/cli-plugins/docker-buildx'
+> ^C
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo mkdir -p /usr/libexec/docker/cli-plugins
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo mv docker-buildx /usr/libexec/docker/cli-plugins/
+mv: cannot stat 'docker-buildx': No such file or directory
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo rm -f docker-buildx
+sudo rm -f /usr/libexec/docker/cli-plugins/docker-buildx
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo curl -L https://github.com/docker/buildx/releases/download/v0.14.0/buildx-v0.14.0.linux-amd64 \
+-o docker-buildx
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0   0     0   0     0     0     0  --:--:-- --:--:-- --:--:--     0
+100 54980k 100 54980k   0     0 24376k     0   0:00:02  0:00:02 --:--:-- 26021k
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ ls -lh docker-buildx
+-rw-r--r--. 1 root root 54M Mar  3 10:17 docker-buildx
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo mkdir -p /usr/libexec/docker/cli-plugins
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo mv docker-buildx /usr/libexec/docker/cli-plugins/docker-buildx
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ chmod +x /usr/libexec/docker/cli-plugins/docker-buildx
+chmod: changing permissions of '/usr/libexec/docker/cli-plugins/docker-buildx': Operation not permitted
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo chmod +x /usr/libexec/docker/cli-plugins/docker-buildx
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo systemctl restart docker
+[ec2-user@ip-172-31-34-140 myprofile-app]$ docker buildx version
+github.com/docker/buildx v0.14.0 171fcbeb69d67c90ba7f44f41a9e418f6a6ec1da
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ docker compose up -d
+WARN[0000] /home/ec2-user/myprofile-app/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion
+[+] up 0/1
+ ⠋ Image myprofile-app-myprofile Building                                                                                                               0.0s
+compose build requires buildx 0.17.0 or later
+[ec2-user@ip-172-31-34-140 myprofile-app]$ [ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ ls -lh docker-buildx
+-rw-r--r--. 1 root root 54M Mar  3 10:17 docker-buildx
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo mkdir -p /usr/libexec/docker/cli-plugins
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo mv docker-buildx /usr/libexec/docker/cli-plugins/docker-buildx
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ chmod +x /usr/libexec/docker/cli-plugins/docker-buildx
+chmod: changing permissions of '/usr/libexec/docker/cli-plugins/docker-buildx': Operation not permitted
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo chmod +x /usr/libexec/docker/cli-plugins/docker-buildx
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo systemctl restart docker
+[ec2-user@ip-172-31-34-140 myprofile-app]$ docker buildx version
+github.com/docker/buildx v0.14.0 171fcbeb69d67c90ba7f44f41a9e418f6a6ec1da
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ docker compose up -d
+WARN[0000] /home/ec2-user/myprofile-app/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion
+[+] up 0/1
+ ⠋ Image myprofile-app-myprofile Building                                                                                                               0.0s
+compose build requires buildx 0.17.0 or later
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+-bash: [ec2-user@ip-172-31-34-140: command not found
+-bash: [ec2-user@ip-172-31-34-140: command not found
+-bash: -rw-r--r--.: command not found
+-bash: [ec2-user@ip-172-31-34-140: command not found
+-bash: [ec2-user@ip-172-31-34-140: command not found
+-bash: [ec2-user@ip-172-31-34-140: command not found
+-bash: [ec2-user@ip-172-31-34-140: command not found
+-bash: [ec2-user@ip-172-31-34-140: command not found
+-bash: [ec2-user@ip-172-31-34-140: command not found
+-bash: [ec2-user@ip-172-31-34-140: command not found
+-bash: [ec2-user@ip-172-31-34-140: command not found
+-bash: [ec2-user@ip-172-31-34-140: command not found
+-bash: [ec2-user@ip-172-31-34-140: command not found
+-bash: [ec2-user@ip-172-31-34-140: command not found
+-bash: [ec2-user@ip-172-31-34-140: command not found
+-bash: chmod:: command not found
+-bash: [ec2-user@ip-172-31-34-140: command not found
+-bash: [ec2-user@ip-172-31-34-140: command not found
+-bash: [ec2-user@ip-172-31-34-140: command not found
+-bash: [ec2-user@ip-172-31-34-140: command not found
+-bash: [ec2-user@ip-172-31-34-140: command not found
+-bash: [ec2-user@ip-172-31-34-140: command not found
+-bash: github.com/docker/buildx: No such file or directory
+-bash: [ec2-user@ip-172-31-34-140: command not found
+-bash: [ec2-user@ip-172-31-34-140: command not found
+-bash: [ec2-user@ip-172-31-34-140: command not found
+-bash: [ec2-user@ip-172-31-34-140: command not found
+-bash: [ec2-user@ip-172-31-34-140: command not found
+-bash: version: command not found
+-bash: WARN[0000]: command not found
+-bash: [+]: command not found
+-bash: ⠋: command not found
+-bash: compose: command not found
+-bash: [ec2-user@ip-172-31-34-140: command not found
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo rm -f /usr/libexec/docker/cli-plugins/docker-buildx
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo curl -L https://github.com/docker/buildx/releases/download/v0.17.1/buildx-v0.17.1.linux-amd64 \
+-o docker-buildx
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0   0     0   0     0     0     0  --:--:-- --:--:-- --:--:--     0
+
+100 55772k 100 55772k   0     0 24757k     0   0:00:02  0:00:02 --:--:-- 45897k
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ ls -lh docker-buildx
+-rw-r--r--. 1 root root 55M Mar  3 10:21 docker-buildx
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo mv docker-buildx /usr/libexec/docker/cli-plugins/docker-buildx
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo chmod +x /usr/libexec/docker/cli-plugins/docker-buildx
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ sudo systemctl restart docker
+[ec2-user@ip-172-31-34-140 myprofile-app]$ docker buildx version
+github.com/docker/buildx v0.17.1 257815a6fbaee88976808020bf04274388275ae8
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ docker compose up -d
+WARN[0000] /home/ec2-user/myprofile-app/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion
+[+] Building 0.5s (9/9) FINISHED
+ => [internal] load local bake definitions                                                                                                             0.0s
+ => => reading from stdin 532B                                                                                                                         0.0s
+ => [internal] load build definition from Dockerfile                                                                                                   0.0s
+ => => transferring dockerfile: 163B                                                                                                                   0.0s
+ => [internal] load metadata for docker.io/library/nginx:latest                                                                                        0.0s
+ => [internal] load .dockerignore                                                                                                                      0.0s
+ => => transferring context: 2B                                                                                                                        0.0s
+ => [internal] load build context                                                                                                                      0.1s
+ => => transferring context: 776B                                                                                                                      0.0s
+ => [1/2] FROM docker.io/library/nginx:latest                                                                                                          0.1s
+ => [2/2] COPY index.html /usr/share/nginx/html/index.html                                                                                             0.1s
+ => exporting to image                                                                                                                                 0.0s
+ => => exporting layers                                                                                                                                0.0s
+ => => writing image sha256:18296632780d952e6f8e0c85d0181eae2bdcbaa81818cae3a13cb41df512b59a                                                           0.0s
+ => => naming to docker.io/library/myprofile-app-myprofile                                                                                             0.0s
+ => resolving provenance for metadata file                                                                                                             0.0s
+[+] up 3/3
+ ✔ Image myprofile-app-myprofile Built                                                                                                                  0.5s
+ ✔ Network myprofile-app_default Created                                                                                                                0.1s
+ ✔ Container myprofile_container Started                                                                                                                0.4s
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ docker ps -a
+CONTAINER ID   IMAGE                     COMMAND                  CREATED             STATUS                        PORTS                                   NAMES
+4342c867cca1   myprofile-app-myprofile   "/docker-entrypoint.…"   2 minutes ago       Up 2 minutes                  0.0.0.0:8080->80/tcp, :::8080->80/tcp   myprofile_container
+e435ff38fc58   nginx                     "/docker-entrypoint.…"   45 minutes ago      Exited (0) 12 minutes ago                                             Gopi
+7ebb46046087   nginx                     "/docker-entrypoint.…"   49 minutes ago      Exited (0) 12 minutes ago                                             jovial_fermat
+490feb1ca58b   nginx                     "/docker-entrypoint.…"   49 minutes ago      Exited (0) 12 minutes ago                                             eager_driscoll
+6a2dcc350332   nginx                     "/docker-entrypoint.…"   51 minutes ago      Exited (128) 47 minutes ago                                           beautiful_goldwasser
+513c822b2ddb   nginx                     "/docker-entrypoint.…"   52 minutes ago      Created                                                               elated_hertz
+f1a448c1dbe9   hello-world               "/hello"                 About an hour ago   Exited (0) 44 minutes ago                                             admiring_bell
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ docker system prune -a
+WARNING! This will remove:
+  - all stopped containers
+  - all networks not used by at least one container
+  - all images without at least one container associated to them
+  - all build cache
+
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+e435ff38fc587142f4e9cd2df6758863288613222e06e842dcf337fe9fa50be3
+7ebb4604608702b52b829a01ce595580a653167313b97c319856ee8725e06947
+490feb1ca58bd153f3735975fe6578a9113851eaba84a108931fbbe96feef8f1
+6a2dcc350332e99acf699f923405cf27469ecaacd31031695c00b8f91ca9b822
+513c822b2ddb0f44c1788f51002935398c9d00b5f6c537c0be0831cd12f774c8
+f1a448c1dbe97e17f165c28c48a29cd2d670a6b852677045f7b37fe5663fcbd6
+
+Deleted Images:
+untagged: hello-world:latest
+untagged: hello-world@sha256:ef54e839ef541993b4e87f25e752f7cf4238fa55f017957c2eb44077083d7a6a
+deleted: sha256:1b44b5a3e06a9aae883e7bf25e45c100be0bb81a0e01b32de604f3ac44711634
+deleted: sha256:53d204b3dc5ddbc129df4ce71996b8168711e211274c785de5e0d4eb68ec3851
+untagged: nginx:latest
+untagged: nginx@sha256:0236ee02dcbce00b9bd83e0f5fbc51069e7e1161bd59d99885b3ae1734f3392e
+deleted: sha256:fd204fe2f75024354b1f979d38cc43def9e049cc2df1cda45074d1b84c4f9b3e
+
+Deleted build cache objects:
+rvq3x7la0fmj16x4bzhqgkos4
+ytfxkljiqqpuh1pmy6ch29nac
+puv8p8s6xyukbgnbglxd4ito2
+z1gmnreemnr0jxph3173w2sof
+lu5nfitq1gjbb39frcflt8tuz
+y8s7kcbj2k1pgj6qsx4yte5ne
+reu0h0tyotocrm5py97l38u7b
+pnn9r66l374mvasfxx7f63aev
+lttc3yssf6o4xqtldsizxtfls
+jrp2sp44wl0fjzlwv28evi5qz
+m36d9k7pce6fi2o5a4a5hj4ed
+
+Total reclaimed space: 15.87kB
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ docker compose up -d
+WARN[0000] /home/ec2-user/myprofile-app/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion
+[+] up 1/1
+ ✔ Container myprofile_container Running                                                                                                                0.0s
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ docker compose down
+docker compose up -d --build
+WARN[0000] /home/ec2-user/myprofile-app/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion
+[+] down 2/2
+ ✔ Container myprofile_container Removed                                                                                                                0.7s
+ ✔ Network myprofile-app_default Removed                                                                                                                0.6s
+WARN[0000] /home/ec2-user/myprofile-app/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion
+[+] Building 2.7s (9/9) FINISHED
+ => [internal] load local bake definitions                                                                                                             0.0s
+ => => reading from stdin 532B                                                                                                                         0.0s
+ => [internal] load build definition from Dockerfile                                                                                                   0.0s
+ => => transferring dockerfile: 163B                                                                                                                   0.0s
+ => [internal] load metadata for docker.io/library/nginx:latest                                                                                        2.3s
+ => [internal] load .dockerignore                                                                                                                      0.0s
+ => => transferring context: 2B                                                                                                                        0.0s
+ => [internal] load build context                                                                                                                      0.0s
+ => => transferring context: 776B                                                                                                                      0.0s
+ => [1/2] FROM docker.io/library/nginx:latest@sha256:0236ee02dcbce00b9bd83e0f5fbc51069e7e1161bd59d99885b3ae1734f3392e                                  0.2s
+ => => resolve docker.io/library/nginx:latest@sha256:0236ee02dcbce00b9bd83e0f5fbc51069e7e1161bd59d99885b3ae1734f3392e                                  0.0s
+ => => sha256:0236ee02dcbce00b9bd83e0f5fbc51069e7e1161bd59d99885b3ae1734f3392e 10.23kB / 10.23kB                                                       0.0s
+ => => sha256:b7f90eb243ff5e2c4a7dc61768160e888ac459e2c05aeb1b3bdf90920aa9d7e9 2.29kB / 2.29kB                                                         0.0s
+ => => sha256:fd204fe2f75024354b1f979d38cc43def9e049cc2df1cda45074d1b84c4f9b3e 9.09kB / 9.09kB                                                         0.0s
+ => [2/2] COPY index.html /usr/share/nginx/html/index.html                                                                                             0.0s
+ => exporting to image                                                                                                                                 0.0s
+ => => exporting layers                                                                                                                                0.0s
+ => => writing image sha256:c915b288ee5d6457bf8fc6cb55a441fdff670f291015850b5688d3d0ddbf649a                                                           0.0s
+ => => naming to docker.io/library/myprofile-app-myprofile                                                                                             0.0s
+ => resolving provenance for metadata file                                                                                                             0.0s
+[+] up 3/3
+ ✔ Image myprofile-app-myprofile Built                                                                                                                  2.8s
+ ✔ Network myprofile-app_default Created                                                                                                                0.2s
+ ✔ Container myprofile_container Started                                                                                                                0.4s
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ docker build -t bookstore .
+docker rm -f myprofile
+[+] Building 0.7s (7/7) FINISHED                                                                                                             docker:default
+ => [internal] load build definition from Dockerfile                                                                                                   0.0s
+ => => transferring dockerfile: 163B                                                                                                                   0.0s
+ => [internal] load metadata for docker.io/library/nginx:latest                                                                                        0.6s
+ => [internal] load .dockerignore                                                                                                                      0.0s
+ => => transferring context: 2B                                                                                                                        0.0s
+ => [internal] load build context                                                                                                                      0.0s
+ => => transferring context: 91B                                                                                                                       0.0s
+ => [1/2] FROM docker.io/library/nginx:latest@sha256:0236ee02dcbce00b9bd83e0f5fbc51069e7e1161bd59d99885b3ae1734f3392e                                  0.0s
+ => CACHED [2/2] COPY index.html /usr/share/nginx/html/index.html                                                                                      0.0s
+ => exporting to image                                                                                                                                 0.0s
+ => => exporting layers                                                                                                                                0.0s
+ => => writing image sha256:e8dff999abe434b326f41403324a26aabcf051a6d187d894eca21c80dcea15d2                                                           0.0s
+ => => naming to docker.io/library/bookstore                                                                                                           0.0s
+Error response from daemon: No such container: myprofile
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ docker run -d -p 9090:80 --name bookstore bookstore
+a9206dfc977d368d923a55999889a9cf3a0cd080e4b2258a69af0bdd23d01393
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ ls
+Dockerfile  docker-compose.yml  index.html
+[ec2-user@ip-172-31-34-140 myprofile-app]$ cat index.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            margin: auto;
+            width: 400px;
+            box-shadow: 0 0 10px gray;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Your Name</h1>
+        <p><b>Role:</b> DevOps Learner</p>
+        <p><b>Location:</b> India</p>
+        <p><b>Project:</b> EC2 + Docker Practice</p>
+    </div>
+</body>
+</html>
+[ec2-user@ip-172-31-34-140 myprofile-app]$ vi index.html
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ docker compose down
+docker compose up -d --build
+WARN[0000] /home/ec2-user/myprofile-app/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion
+[+] down 2/2
+ ✔ Container myprofile_container Removed                                                                                                                0.5s
+ ✔ Network myprofile-app_default Removed                                                                                                                0.5s
+WARN[0000] /home/ec2-user/myprofile-app/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion
+[+] Building 1.1s (9/9) FINISHED
+ => [internal] load local bake definitions                                                                                                             0.0s
+ => => reading from stdin 532B                                                                                                                         0.0s
+ => [internal] load build definition from Dockerfile                                                                                                   0.0s
+ => => transferring dockerfile: 163B                                                                                                                   0.0s
+ => [internal] load metadata for docker.io/library/nginx:latest                                                                                        0.9s
+ => [internal] load .dockerignore                                                                                                                      0.0s
+ => => transferring context: 2B                                                                                                                        0.0s
+ => [internal] load build context                                                                                                                      0.0s
+ => => transferring context: 2.05kB                                                                                                                    0.0s
+ => CACHED [1/2] FROM docker.io/library/nginx:latest@sha256:0236ee02dcbce00b9bd83e0f5fbc51069e7e1161bd59d99885b3ae1734f3392e                           0.0s
+ => [2/2] COPY index.html /usr/share/nginx/html/index.html                                                                                             0.0s
+ => exporting to image                                                                                                                                 0.0s
+ => => exporting layers                                                                                                                                0.0s
+ => => writing image sha256:60455fdd4253e04fb5c31285ea24561d5cd4ddcbdad7dd1d057458e171e9aed1                                                           0.0s
+ => => naming to docker.io/library/myprofile-app-myprofile                                                                                             0.0s
+ => resolving provenance for metadata file                                                                                                             0.0s
+[+] up 3/3
+ ✔ Image myprofile-app-myprofile Built                                                                                                                  1.1s
+ ✔ Network myprofile-app_default Created                                                                                                                0.1s
+ ✔ Container myprofile_container Started                                                                                                                0.4s
+[ec2-user@ip-172-31-34-140 myprofile-app]$ ls
+Dockerfile  docker-compose.yml  index.html
+[ec2-user@ip-172-31-34-140 myprofile-app]$ cat index.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Book Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #34495e;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            padding: 30px;
+            text-align: center;
+        }
+        .book {
+            background: white;
+            padding: 20px;
+            margin: 15px auto;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>📚 Welcome to Nattu's Book Store</h1>
+    <p>Your one-stop shop for knowledge and stories</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Books</a>
+    <a href="#">Categories</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+    <h2>Featured Books</h2>
+
+    <div class="book">
+        <h3>Atomic Habits</h3>
+        <p>Author: James Clear</p>
+        <p>Price: ₹499</p>
+    </div>
+
+    <div class="book">
+        <h3>The Alchemist</h3>
+        <p>Author: Paulo Coelho</p>
+        <p>Price: ₹399</p>
+    </div>
+
+    <div class="book">
+        <h3>Rich Dad Poor Dad</h3>
+        <p>Author: Robert Kiyosaki</p>
+        <p>Price: ₹450</p>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Nattu's Book Store | Built with Docker on AWS EC2 🚀</p>
+</footer>
+
+</body>
+</html>
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ docker compose down
+WARN[0000] /home/ec2-user/myprofile-app/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion
+[+] down 2/2
+ ✔ Container myprofile_container Removed                                                                                                                0.6s
+ ✔ Network myprofile-app_default Removed                                                                                                                0.5s
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ docker compose build --no-cache
+WARN[0000] /home/ec2-user/myprofile-app/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion
+[+] Building 1.1s (9/9) FINISHED
+ => [internal] load local bake definitions                                                                                                             0.0s
+ => => reading from stdin 556B                                                                                                                         0.0s
+ => [internal] load build definition from Dockerfile                                                                                                   0.0s
+ => => transferring dockerfile: 163B                                                                                                                   0.0s
+ => [internal] load metadata for docker.io/library/nginx:latest                                                                                        0.9s
+ => [internal] load .dockerignore                                                                                                                      0.0s
+ => => transferring context: 2B                                                                                                                        0.0s
+ => [internal] load build context                                                                                                                      0.0s
+ => => transferring context: 91B                                                                                                                       0.0s
+ => CACHED [1/2] FROM docker.io/library/nginx:latest@sha256:0236ee02dcbce00b9bd83e0f5fbc51069e7e1161bd59d99885b3ae1734f3392e                           0.0s
+ => [2/2] COPY index.html /usr/share/nginx/html/index.html                                                                                             0.0s
+ => exporting to image                                                                                                                                 0.0s
+ => => exporting layers                                                                                                                                0.0s
+ => => writing image sha256:191f1fdb2e2a79f4a627309ce0fc0cb762ef47dec6ee1db8963861a0a29193ab                                                           0.0s
+ => => naming to docker.io/library/myprofile-app-myprofile                                                                                             0.0s
+ => resolving provenance for metadata file                                                                                                             0.0s
+[+] build 1/1
+ ✔ Image myprofile-app-myprofile Built                                                                                                                  1.2s
+[ec2-user@ip-172-31-34-140 myprofile-app]$ docker compose up -d
+WARN[0000] /home/ec2-user/myprofile-app/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion
+[+] up 2/2
+ ✔ Network myprofile-app_default Created                                                                                                                0.1s
+ ✔ Container myprofile_container Started                                                                                                                0.4s
+[ec2-user@ip-172-31-34-140 myprofile-app]$ docker build --no-cache -t bookstore .
+docker rm -f bookstore
+docker run -d -p 9090:80 --name bookstore bookstore
+[+] Building 0.4s (7/7) FINISHED                                                                                                             docker:default
+ => [internal] load build definition from Dockerfile                                                                                                   0.0s
+ => => transferring dockerfile: 163B                                                                                                                   0.0s
+ => [internal] load metadata for docker.io/library/nginx:latest                                                                                        0.3s
+ => [internal] load .dockerignore                                                                                                                      0.0s
+ => => transferring context: 2B                                                                                                                        0.0s
+ => [internal] load build context                                                                                                                      0.0s
+ => => transferring context: 91B                                                                                                                       0.0s
+ => CACHED [1/2] FROM docker.io/library/nginx:latest@sha256:0236ee02dcbce00b9bd83e0f5fbc51069e7e1161bd59d99885b3ae1734f3392e                           0.0s
+ => [2/2] COPY index.html /usr/share/nginx/html/index.html                                                                                             0.0s
+ => exporting to image                                                                                                                                 0.0s
+ => => exporting layers                                                                                                                                0.0s
+ => => writing image sha256:eddc4cdc13022bfaf6bd5e25969a1528a80a2ae74b3438fc212a7079670771c8                                                           0.0s
+ => => naming to docker.io/library/bookstore                                                                                                           0.0s
+bookstore
+d93738ce8e5b10dda92d4acd140fb74f4355e7ca309c4f54892e70d6f8681542
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+(reverse-i-search)`': ^C
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$
+[ec2-user@ip-172-31-34-140 myprofile-app]$ docker exec -it <container-name> bash
+-bash: container-name: No such file or directory
+[ec2-user@ip-172-31-34-140 myprofile-app]$ cat /usr/share/nginx/html/index.html
+cat: /usr/share/nginx/html/index.html: No such file or directory
+[ec2-user@ip-172-31-34-140 myprofile-app]$
