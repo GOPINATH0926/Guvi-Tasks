@@ -722,11 +722,3 @@ d93738ce8e5b10dda92d4acd140fb74f4355e7ca309c4f54892e70d6f8681542
 [ec2-user@ip-172-31-34-140 myprofile-app]$
 [ec2-user@ip-172-31-34-140 myprofile-app]$
 [ec2-user@ip-172-31-34-140 myprofile-app]$
-(reverse-i-search)`': ^C
-[ec2-user@ip-172-31-34-140 myprofile-app]$
-[ec2-user@ip-172-31-34-140 myprofile-app]$
-[ec2-user@ip-172-31-34-140 myprofile-app]$ docker exec -it <container-name> bash
--bash: container-name: No such file or directory
-[ec2-user@ip-172-31-34-140 myprofile-app]$ cat /usr/share/nginx/html/index.html
-cat: /usr/share/nginx/html/index.html: No such file or directory
-[ec2-user@ip-172-31-34-140 myprofile-app]$
